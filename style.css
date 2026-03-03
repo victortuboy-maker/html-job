@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #131921;
+    color: white;
+    padding: 15px;
+}
+
+.search-bar {
+    width: 40%;
+    padding: 8px;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('travel-bg.jpg');
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.category-card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}

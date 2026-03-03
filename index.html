@@ -1,0 +1,94 @@
+victorious-travel/
+│
+├── frontend/
+│   ├── index.html
+│   ├── product.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── style.css
+│   └── script.js
+│
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+│
+└── database.sql
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VictoriousGodsWill Travel & Tours Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <h2>🌍 VictoriousGodsWill Travel</h2>
+    </div>
+
+    <input type="text" class="search-bar" placeholder="Search visas, flights, hotels...">
+
+    <div class="nav-links">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="#">Bookings</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Your Global Travel Partner</h1>
+    <p>Visa | Flights | Hotels | Insurance</p>
+</section>
+
+<section class="categories">
+    <div class="category-card">
+        <h3>Visa Processing</h3>
+        <a href="product.html?type=visa">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <h3>Flight Tickets</h3>
+        <a href="product.html?type=flight">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <h3>Hotel Reservation</h3>
+        <a href="product.html?type=hotel">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <h3>Travel Insurance</h3>
+        <a href="product.html?type=insurance">Explore</a>
+    </div>
+</section>
+
+<footer>
+    <p>Email: victoriousgodswilltravels@gmail.com</p>
+    <p>Phone: 08026737812</p>
+    <p>© 2026 VictoriousGodsWill Travel & Tours Ltd</p>
+</footer>
+
+</body>
+</html>
+
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<button onclick="payWithPaystack()">Pay Now</button>
+
+<script>
+function payWithPaystack(){
+    var handler = PaystackPop.setup({
+        key: 'YOUR_PUBLIC_KEY',
+        email: "customer@email.com",
+        amount: 50000 * 100,
+        currency: "NGN",
+        callback: function(response){
+            alert('Payment complete!');
+        }
+    });
+    handler.openIframe();
+}
+</script>
